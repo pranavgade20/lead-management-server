@@ -17,10 +17,11 @@
     "url": "https://github.com/jboss-outreach/lead-management-server/issues"
   },
   "dependencies": {
-    "angular-patternfly": "^4.13.3",
-    "express": "^4.15.3",
-    "firebaseui": "^2.5.1"
-    "socket.io": "^2.0.4"
+    "angular-patternfly": "latest",
+    "express": "latest",
+    "firebase": "latest",
+    "firebaseui": "latest",
+    "socket.io": "latest"
   },
   "homepage": "https://github.com/jboss-outreach/lead-management-server#readme"
 }
