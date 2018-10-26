@@ -30,6 +30,7 @@ const http = require('http').Server(server);
 const io = require('socket.io')(http);
 
 server.use(bodyParser.urlencoded({ extended: true }));
+server.use(bodyParser.json());
 
 server.use('/', express.static(__dirname + "/public/"));
 server.use('/node_modules', express.static(__dirname + "/node_modules/"));
@@ -40,6 +41,8 @@ server.post('/api/setUser', (req, res) => {
       assert.equal(err, null);
       id = doc[0].token + 1;
    });
+
+   console.log(id);
 
    collection.insertOne({
       _id : id,
@@ -54,9 +57,27 @@ server.post('/api/setUser', (req, res) => {
 
    collection.replaceOne({ }, {
       _id : 0,
-      text : id
+      token : id
    });
    res.send('success');
+});
+
+server.get('/api/getUser', (req, res) => {
+  collection.find({token : req.query.token}).toArray((err, doc) => {
+      assert.equal(err, null);
+      if (doc[0] == null) {
+        res.send('not found');
+      }
+      
+      res.send({
+        '_id' : doc[0]._id,
+        'token' : doc[0].token,
+        'username' : doc[0].username,
+        'phoneNumber' : doc[0].phoneNumber,
+        'occupation' : doc[0].occupation,
+        'isUser' : doc[0].isUser
+      });
+   });
 })
 
 server.post('/api/calls', (req, res) => {
