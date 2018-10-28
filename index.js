@@ -5,12 +5,13 @@ const server = express();
 const http = require('http').Server(server);
 const io = require('socket.io')(http);
 
-server.use(bodyParser.urlencoded({ extended: false }));
+server.use(bodyParser.urlencoded({ extended: true }));
 
 server.use('/', express.static(__dirname + "/public/"));
 server.use('/node_modules', express.static(__dirname + "/node_modules/"));
 
 server.post('/api/calls', (req, res) => {
+  console.log(req.body)
   const number = req.body.number;
   let status;
   switch (req.body.status) {
@@ -44,4 +45,8 @@ io.on('connection', (socket) => {
 
 http.listen(4000, () => {
   console.log('Listening on port 4000');
-})
+});
+
+module.exports = {
+  app : server
+}
