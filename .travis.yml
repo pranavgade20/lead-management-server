@@ -1,3 +1,13 @@
 language: node_js
-
 sudo: enabled
+
+node_js:
+  - "8"
+
+install:
+  - npm install
+
+cache: npm
+
+script:
+  - npm test

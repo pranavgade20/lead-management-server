@@ -1,6 +1,5 @@
 # lead-management-server
-![Build Status](https://travis-ci.org/sidhyatikku/lead-management-server.svg?branch=master)
-
+[![Build Status](https://travis-ci.org/JBossOutreach/lead-management-server.svg?branch=master)](https://travis-ci.org/JBossOutreach/lead-management-server)
 
 For account authentication, set up a Firebase project [here](https://console.firebase.google.com)
 and add the project configuration in the [public/js/config.js](https://github.com/jboss-outreach/lead-management-server/blob/master/public/js/config.js) file.
@@ -33,14 +32,18 @@ Make sure that the branch name is meaningful and related to the changes you are 
 Execute the following commands in terminal/command prompt to run the project:
 ```sh
 $ npm install
-$ node app.js
+$ npm start
 ```
 
 ## Contributing
 
 **1.** Make reasonable changes.
+**2.** Test your changes by:
+```
+$ npm test
+```
 
-**2.** **Add all changes** by running this command on the terminal/command prompt:
+**3.** **Add all changes** by running this command on the terminal/command prompt:
 ```
 $ git add .
 ```
@@ -52,17 +55,17 @@ $ git add path/to/your/file
 ```
 Make sure you replace `path/to/your/file` with the actual path to the file you want to add to the staging area.
 
-**3.** **Commit** changes.
+**4.** **Commit** changes.
 ```
 $ git commit -m "DESCRIBE YOUR CHANGES HERE"
 ```
-**4.** **Push** your changes.
+**5.** **Push** your changes.
 ```
 $ git push origin YOUR_BRANCH_NAME
 ```
 Make sure you push only to your branch.
 
-**5.** **Create a Pull Request** by clicking the _New Pull Request_ button on your repository page.
+**6.** **Create a Pull Request** by clicking the _New Pull Request_ button on your repository page.
 
 ## Help
 If you need any help anywhere in the process, you can always ask a question on our [Gitter Chat](https://gitter.im/jboss-outreach/gci).
