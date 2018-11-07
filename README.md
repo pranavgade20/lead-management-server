@@ -38,8 +38,12 @@ $ npm start
 ## Contributing
 
 **1.** Make reasonable changes.
+**2.** Test your changes by:
+```
+$ npm test
+```
 
-**2.** **Add all changes** by running this command on the terminal/command prompt:
+**3.** **Add all changes** by running this command on the terminal/command prompt:
 ```
 $ git add .
 ```
@@ -51,17 +55,17 @@ $ git add path/to/your/file
 ```
 Make sure you replace `path/to/your/file` with the actual path to the file you want to add to the staging area.
 
-**3.** **Commit** changes.
+**4.** **Commit** changes.
 ```
 $ git commit -m "DESCRIBE YOUR CHANGES HERE"
 ```
-**4.** **Push** your changes.
+**5.** **Push** your changes.
 ```
 $ git push origin YOUR_BRANCH_NAME
 ```
 Make sure you push only to your branch.
 
-**5.** **Create a Pull Request** by clicking the _New Pull Request_ button on your repository page.
+**6.** **Create a Pull Request** by clicking the _New Pull Request_ button on your repository page.
 
 ## Help
 If you need any help anywhere in the process, you can always ask a question on our [Gitter Chat](https://gitter.im/jboss-outreach/gci).
